@@ -1,0 +1,1 @@
+C:\workarea\net\structuremapSample\structuremapSample\structuremapSample.Tests\obj\Debug\structuremapSample.Tests.csprojResolveAssemblyReference.cache
