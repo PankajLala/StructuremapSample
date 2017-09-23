@@ -10,19 +10,19 @@ namespace structuremapSample.Controllers
 {
     public class HomeController : ApiController
     {
-        private IEmailService _emailService;
+        private ILoggerService _loggerService;
 
 
-        public HomeController(IEmailService emailService)
+        public HomeController(ILoggerService loggerService)
         {
 
-            _emailService = emailService;
+            _loggerService = loggerService;
         }
 
         [HttpGet]
         public string Get()
         {
-            _emailService.SendMail("welcome again");
+            _loggerService.Log("welcome again");
             return "Welcome back";
          
         }

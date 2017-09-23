@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web.Http;
 using StructureMap.Graph;
 using System.Web.Http.Dispatcher;
+using Hangfire.StructureMap;
 using WebApi.StructureMap;
 
 namespace structuremapSample
@@ -35,6 +36,10 @@ namespace structuremapSample
             });
 
             config.DependencyResolver = new DependencyResolver(container);
+            Hangfire.GlobalConfiguration.Configuration.UseStructureMapActivator(container);
+
+            
+            
 
         }
     }
